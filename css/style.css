@@ -1,0 +1,154 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@property --a {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+@property --p {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+@property --c1 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #000;
+}
+@property --c2 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #000;
+}
+
+/* animação do background */
+html {
+  --s: 80px;
+  --_g: #0000, var(--c1) 2deg calc(var(--a) - 2deg), #0000 var(--a);
+  background: conic-gradient(
+      from calc(-45deg - var(--a) / 2) at top var(--p) left var(--p),
+      var(--_g)
+    ),
+    conic-gradient(
+      from calc(-45deg - var(--a) / 2) at top var(--p) left var(--p),
+      var(--_g)
+    ),
+    conic-gradient(
+      from calc(45deg - var(--a) / 2) at top var(--p) right var(--p),
+      var(--_g)
+    ),
+    conic-gradient(
+      from calc(45deg - var(--a) / 2) at top var(--p) right var(--p),
+      var(--_g)
+    ),
+    conic-gradient(
+      from calc(-135deg - var(--a) / 2) at bottom var(--p) left var(--p),
+      var(--_g)
+    ),
+    conic-gradient(
+      from calc(-135deg - var(--a) / 2) at bottom var(--p) left var(--p),
+      var(--_g)
+    ),
+    conic-gradient(
+      from calc(135deg - var(--a) / 2) at bottom var(--p) right var(--p),
+      var(--_g)
+    ),
+    conic-gradient(
+        from calc(135deg - var(--a) / 2) at bottom var(--p) right var(--p),
+        var(--_g)
+      )
+      var(--c2);
+  background-size: calc(2 * var(--s)) calc(2 * var(--s));
+  animation: m 2s infinite alternate linear;
+}
+
+@keyframes m {
+  0%,
+  15% {
+    --a: 135deg;
+    --p: 20%;
+    --c1: #000;
+    --c2: #fff;
+    background-position: 0 0, var(--s) var(--s);
+  }
+  45%,
+  50% {
+    --a: 90deg;
+    --p: 25%;
+    --c1: #000;
+    --c2: #fff;
+    background-position: 0 0, var(--s) var(--s);
+  }
+  50.01%,
+  55% {
+    --a: 90deg;
+    --p: 25%;
+    --c2: #000;
+    --c1: #fff;
+    background-position: var(--s) 0, 0 var(--s);
+  }
+  85%,
+  100% {
+    --a: 135deg;
+    --p: 20%;
+    --c2: #000;
+    --c1: #fff;
+    background-position: var(--s) 0, 0 var(--s);
+  }
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: column;
+  width: 300px;
+  height: 200px;
+  border: solid white;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="text"] {
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
