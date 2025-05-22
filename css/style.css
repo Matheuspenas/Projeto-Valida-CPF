@@ -1,3 +1,4 @@
+/* === SEU CSS ORIGINAL (mantido) === */
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -23,7 +24,6 @@ body {
   initial-value: #000;
 }
 
-/* animação do background */
 html {
   --s: 80px;
   --_g: #0000, var(--c1) 2deg calc(var(--a) - 2deg), #0000 var(--a);
@@ -127,11 +127,12 @@ label {
 input[type="text"] {
   padding: 5px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 5px;
   margin-bottom: 10px;
   width: 100%;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 button {
@@ -139,9 +140,6 @@ button {
   border: none;
   color: white;
   padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
@@ -151,4 +149,34 @@ button {
 
 button:hover {
   background-color: #45a049;
+}
+
+.message {
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+/* CPF VÁLIDO */
+.valido {
+  border-color: #28a745 !important;
+  color: #155724;
+  background-color: #d4edda;
+}
+
+/* CPF INVÁLIDO */
+.invalido {
+  border-color: #dc3545 !important;
+  color: #721c24;
+  background-color: #f8d7da;
+}
+
+/* CPF INCOMPLETO */
+.incompleto {
+  border-color: #ffc107 !important;
+  color: #856404;
+  background-color: #fff3cd;
 }
