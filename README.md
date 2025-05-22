@@ -9,10 +9,6 @@ Projeto web simples e funcional para **validação de CPF** (Cadastro de Pessoa 
 - 🎨 Interface leve com animação de fundo em CSS puro.
 - 🖋️ Máscara dinâmica: formata automaticamente para `000.000.000-00`.
 
-## De uma olhada em sua execução
-
-[Assista ao vídeo](/video/cpf.mp4)
-
 ## 🚀 Teste Você mesmo
 
 1. **Git - pages**:
