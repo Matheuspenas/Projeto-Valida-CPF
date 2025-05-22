@@ -11,10 +11,8 @@ Projeto web simples e funcional para **validação de CPF** (Cadastro de Pessoa 
 
 ## De uma olhada em sua execução
 
-<video width="900" height="500" controls>
-  <source src="./video/cpf.mp4" type="video/mp4">
-  Seu navegador não suporta o elemento de vídeo.
-</video>
+![Demonstração do ValidaCPF](/video/cpf.mp4)
+
 ## 🚀 Teste Você mesmo
 
 1. **Git - pages**:
