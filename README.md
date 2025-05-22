@@ -11,7 +11,7 @@ Projeto web simples e funcional para **validação de CPF** (Cadastro de Pessoa 
 
 ## De uma olhada em sua execução
 
-![Demonstração do ValidaCPF](/video/cpf.mp4)
+[Assista ao vídeo](/video/cpf.mp4)
 
 ## 🚀 Teste Você mesmo
 
